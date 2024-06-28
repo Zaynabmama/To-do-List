@@ -3,28 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To Do List</title>
+  <title>To-Do List</title>
   <link rel="stylesheet" href="Styles/style.css">
   <script src="Scripts/script.js"></script>
 </head>
 <body>
   <div class="container">
+    <h1 >To-Do List</h1>
+    
+    <!-- Task Form -->
+    <form id="addTaskForm">
+      <input type="text" id="descriptionInput" placeholder="Task Description" required>
+      <input type="text" id="assignmentInput" placeholder="Assignment To" required>
+      <input type="date" id="dueDateInput" required>
+      <button type="submit">Add Task</button>
+    </form>
+
+    <!-- Search Input -->
+    <input type="text" id="searchInput" placeholder="Search tasks...">
+
+    <!-- Task Table -->
     <table id="task-table">
       <thead>
         <tr>
           <th>Task Name</th>
           <th>Assignment To</th>
-          <th>Due-Date</th>
+          <th>Due Date</th>
           <th>Status</th>
           <th>Action</th>
         </tr>
       </thead>
       <tbody id="task-list">
-        
+        <!-- Task items will be dynamically added here -->
       </tbody>
     </table>
   </div>
-
-  
 </body>
 </html>
