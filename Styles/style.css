@@ -44,16 +44,16 @@ body {
     background-color: #f2f2f2;
   }
   
-  .completed {
-    text-decoration: line-through;
-    color: #aaaaaa;
-  }
+  
   
   .status-past-due {
     color: #e74c3c;
   }
   
   .status-completed {
-    color: #27ae60;
+    color: #27ae60;.completed {
+        text-decoration: line-through;
+        color: #aaaaaa;
+      }
   }
   

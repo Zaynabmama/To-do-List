@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             description: "Review client feedback",
-            assignmentTo: "Maria Safi",
+            assignmentTo: "Mariam ib",
             dueDate: "2024-08-05",
             status: "pending",
             action: false
@@ -36,7 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
           action: false
         }
       ];
-      
+      //function saveTasksToLocalStorage(){
+      //  localStorage.setItem("data",container.innerHTML)
+     // }
   
     function Tasks(filteredTasks = null) {
       taskList.innerHTML = '';
@@ -60,15 +62,16 @@ document.addEventListener('DOMContentLoaded', function() {
   
         taskList.appendChild(row);
   
-        // Event listener for checkbox change
+        
         row.querySelector('input[type="checkbox"]').addEventListener('change', () => {
           if (row.querySelector('input[type="checkbox"]').checked) {
             tasks[index].status = 'completed';
-            row.classList.add('completed');
+            row.classList.add('status-completed');
             row.querySelector('.status').textContent = 'completed';
           } else {
             tasks[index].status = 'pending';
             row.classList.remove('completed');
+           
             row.querySelector('.status').textContent = 'pending';
           }
         });
@@ -91,7 +94,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   
-    // Add Task Form Submission
+  
     addTaskForm.addEventListener('submit', function(event) {
       event.preventDefault();
       const newTask = {
@@ -124,6 +127,18 @@ document.addEventListener('DOMContentLoaded', function() {
         Tasks(filteredTasks);
       });
   
-    Tasks(); // Initial render of tasks
+    Tasks(); 
+
+
+ 
+  
+ // function addTask(task) {
+  //  const tasks = getTasksFromLocalStorage();
+  //  tasks.push({ text: task, completed: false });
+    //saveTasksToLocalStorage(tasks);
+  //}
+  
+
+  
   });
   
